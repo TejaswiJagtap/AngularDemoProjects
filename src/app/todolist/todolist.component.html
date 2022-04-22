@@ -1,0 +1,20 @@
+<h2>List of Students</h2>
+  <label for="">Add Student..</label>
+  <input type="text" [(ngModel)]="listItem">
+  <br>
+  <button class="btn btn-primary" (click)="addToList()">Add Student</button>
+  <hr>
+  <ul>
+    <li *ngFor="let Lists of List" (click)="removeFromList(Lists)">{{ Lists }}</li>
+  </ul>
+  <label for="">Select Course</label>
+
+  <select name="courses" id="course">
+  <option selected hidden></option> 
+  <option value="java">Core Java</option>
+  <option value="spring">Spring Boot</option>
+  <option value="angular">Angular</option>
+  <option value="jpa">Spring JPA</option>
+  <option value="script">Java Script</option>
+</select>
+

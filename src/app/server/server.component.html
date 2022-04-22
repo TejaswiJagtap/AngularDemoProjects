@@ -1,0 +1,13 @@
+<p>User Details</p>
+
+<label>Username</label>
+<input type="text" class="form-control" [(ngModel)]="userName">
+<p>{{userName}}</p>
+<button class="btn btn-primary" [disabled]="userName===''" (click)="userName=''">Reset User</button>
+<!--<button class="btn btn-primary" (click)="onCreateUser()">Add User</button>-->
+<ul *ngFor="let user of users">
+    <li>{{user.firstName}} {{user.lastName}}
+</li>
+  </ul>
+<!--<div *ngFor="let user of users">{{users}}</div>--> 
+<p [ngStyle]="{backgroundColor:getColor()}">user status is {{getUserStatus()}}</p>
